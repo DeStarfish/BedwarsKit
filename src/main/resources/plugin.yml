@@ -1,0 +1,37 @@
+name: BedwarsKit
+author: DeStarfish
+description: A Addon for BedwarsRel, Added some features to BedwarsRel.
+website: https://github.com/DeStarfish/BedwarsKit
+version: 1.9.9
+main: github.destarfish.bedwarskit.BedwarsKit
+api-version: 1.13
+depend:
+  - BedwarsRel
+  - ProtocolLib
+softdepend:
+  - ItemJoin
+  - MultiWorld
+permissions:
+  bedwarskit.base:
+    description: Hello Permission
+    default: true
+  bwk.reload:
+    description: Reload Permission
+    default: op
+  bwk.edit:
+    description: Edit Permission
+    default: op
+commands:
+  bedwarskit:
+    description: Hello Command
+    usage: /bwk
+    aliases: [ bwk ]
+  bwk reload:
+    description: Reload Command
+    usage: /bwk reload
+  bwk edit:
+    description: Edit Command
+    usage: /bwk edit
+  shout:
+    description: Shout Command
+    usage: /shout

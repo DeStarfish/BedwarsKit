@@ -1,0 +1,88 @@
+# ===================== #
+# BedwarsKit Kit Config #
+# ===================== #
+config-version: "1.9.9"
+# Do not modify: The configuration file will be automatically
+# renamed if it does not match the version currently used by the plugin
+
+kitEnable: true
+kitDefault: "default"
+kitForce: false
+kitForceKit: "default"
+
+kitMenuTitle: "Select a Kit"
+kitMenurow: 6
+
+kitMenuItemGive: true
+kitMenuItemType: "EYE_OF_ENDER"
+kitMenuItemAmount: 1
+kitMenuItemName: "Select a Kit"
+meanSelKitSucc: "&bBedwarsKit &7>> &aSuccessfully selected kit!"
+
+KitDefaultName: "Default"
+KitDefaultDescription: "default kit."
+KitDefaultItemType: "GOLD_HELMET"
+KitDefaultItemAmount: 1
+KitDefaultItemSlot: 0
+KitDefaultItemName: "&fDefault"
+KitDefaultItemLore:
+  - "&f"
+  - "&aKit Introduction"
+  - "&fdefault kit"
+  - "&f"
+  - "&aKit content"
+  - "&fPermanent armor"
+  - "&fPermanent speed effect"
+  - "&f"
+KitDefault_Boost_GiveSpeed_enable: false
+KitDefault_Boost_GiveSpeed_level: 1
+
+KitNoneName: "None"
+KitNoneDescription: "None kit"
+KitNoneItemType: "BARRIER"
+KitNoneItemAmount: 1
+KitNoneItemSlot: 1
+KitNoneItemName: "&fNone"
+KitNoneItemLore:
+  - "&f"
+  - "&aKit Introduction"
+  - "&fnone kit"
+
+KitDefaultLessName: "DefaultLess"
+KitDefaultLessDescription: "DefaultLess kit."
+KitDefaultLessItemType: "LEATHER_HELMET"
+KitDefaultLessItemAmount: 1
+KitDefaultLessItemSlot: 2
+KitDefaultLessItemName: "&fDefaultLess "
+KitDefaultLessItemLore:
+  - "&f"
+  - "&aKit Introduction"
+  - "&fDefaultLess kit"
+  - "&f"
+  - "&aKit content"
+  - "&fPermanent armor (Except for leg guards and boots)"
+  - "&f"
+
+KitDefaultLess_Boost_GiveSpeed_enable: false
+KitDefaultLess_Boost_GiveSpeed_level: 1
+
+KitKangarooName: "Kangaroo"
+KitKangarooDescription: "Kangaroo kit."
+KitKangarooItemType: "FEATHER"
+KitKangarooItemAmount: 1
+KitKangarooItemSlot: 3
+KitKangarooItemName: "&fKangaroo "
+KitKangarooItemLore:
+  - "&f"
+  - "&aKit Introduction"
+  - "&fKangaroo kit"
+  - "&f"
+  - "&aKit content"
+  - "&fAllow you to Double Jump"
+  - "&f"
+KitKangaroo_Boost_Cooldown: 10
+KitKangaroo_Boost_Multiply: 0.1
+KitKangaroo_Boost_Y: 1.8
+KitKangaroo_Boost_X: 0.69
+KitKangaroo_Boost_FallDistane: -12
+KitKangaroo_Boost_FallDistane_resetOnGround: true

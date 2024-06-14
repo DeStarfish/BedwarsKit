@@ -1,0 +1,140 @@
+# ============================ #
+# BedwarsKit ScoreBoard Config #
+# ============================ #
+config-version: "1.9.9"
+# Do not modify: The configuration file will be automatically
+# renamed if it does not match the version currently used by the plugin
+
+meanTeamStat_BedYes: "&a\u2714"
+meanTeamStat_None: "&c\u2718"
+meanTeamStat_BedNo: "&a%aliveCount%"
+meanTeamStat_Alive: "&a"
+meanTeamStat_Dead: "&4"
+meanBedStat_Yes: "\u2714"
+meanBedStat_No: "\u2718"
+meanYou: "%teamColor%\u2b60"
+meanNotYou: "%teamColor%"
+mean2v2Mode: "Double Mode"
+mean4v4Mode: "4v4v4v4 Mode"
+meanServerIp: "&eGithub@DeStarfish"
+meanBedwars: "BEDWARS"
+meanGameEnd: "Game Over"
+# %meanTeamBedYes% : TeamStat indicates the presence of beds in the team
+# %meanTeamNone% : TeamStat indicates that the team has been eliminated
+# %meanTeamBedNo% : In TeamStat, it indicates that the team does not have a bed, but there are players present in the team
+# %aliveCount% : The remaining players in the team
+# %meanYou% : TeamIsMe indicates that you are in the team, %teamColor%: the team color of the player's current team
+# %meanNotYou% : TeamIsMe indicates that you are not in the team, %teamColor%: the team color of the player's current team
+# %%mean2v2Mode% : indicates that this is a 2v2 mode
+# %mean4v4Mode% : indicates that this is a 4v4 mode
+# %meanServerIp% : can be used to fill in the server address or to add duplicate characters
+# %meanBedwars% : can be used to fill in the bedwars or to add duplicate characters
+# %meanGameEnd% : indicates the end of the game
+
+ScoreBoard2v2Title: "&e&l%bw%"
+ScoreBoard2v2Line01: "&7%date% &8%mode%"
+ScoreBoard2v2Line02: "&a%lastTask% in &f%lastTaskTimeLeft%"
+ScoreBoard2v2Line03: "&f "
+ScoreBoard2v2Line04: "&c%redNameS% &f%redName% %redStat% &7%redIsMe%"
+ScoreBoard2v2Line05: "&9%blueNameS% &f%blueName% %blueStat% &7%blueIsMe%"
+ScoreBoard2v2Line06: "&a%greenNameS% &f%greenName% %greenStat% &7%greenIsMe%"
+ScoreBoard2v2Line07: "&e%yellowNameS% &f%yellowName% %yellowStat% &7%yellowIsMe%"
+ScoreBoard2v2Line08: "&f%whiteNameS% &f%whiteName% %whiteStat% &7%whiteIsMe%"
+ScoreBoard2v2Line09: "&7%grayNameS% &f%grayName% %grayStat% &7%grayIsMe%"
+ScoreBoard2v2Line10: "&b%aquaNameS% &f%aquaName% %aquaStat% &7%aquaIsMe%"
+ScoreBoard2v2Line11: "&d%pinkNameS% &f%pinkName% %pinkStat% &7%pinkIsMe%"
+ScoreBoard2v2Line12: "&f  "
+ScoreBoard2v2Line13: "&e%ip%"
+ScoreBoard2v2Line14: ""
+ScoreBoard2v2Line15: ""
+ScoreBoard2v2Line16: ""
+# Variable supported team names Red, Blue, Green, Yellow,
+# Pink, White,  Gray, Aqua, Orange
+# Notice: The same content will be folded into the same line. For example,
+# if you want two empty lines, the first line needs to be a space,
+# and the second line needs to be two spaces
+# Support Variable:
+# %...Name% : Value of config.yml -> 'relTeamName_', the team color name must start with lowercase letters, such as redName, grayName
+# %...Stat% : The status of the team, The value of is required to be the same as above
+# %...IsMe% : Are you in the team or not ? The value of is required to be the same as above
+# %...NameS% : The first character of the team name. The value of is required to be the same as above
+# %...Player% : The number of people in the team, The value of is required to be the same as above
+# %...IsAlive% : Value of 'meanTeamStat_', The value of is required to be the same as above
+# %...BedStat% : Value of 'meanBedStat_', The value of is required to be the same as above
+# %formatTimeLeft% : The remaining time of the formatted game
+# %timeleft_s% : Game remaining time in seconds
+# %timeleft_m% : Game remaining time in minutes
+# %timeleft_h% : Game remaining time - hours
+# %timeleft_d% : Game remaining time in days
+# %timeline_mo% : Game remaining time in months
+# %timeleft_y% : Game remaining time in years
+# %date% : Today's date format is YYYY/M/D, such as 2080/3/32
+# %ip% : The value of meanServerIp in the configuration file
+# %bw% : The value of meanBedwars in the configuration file
+# %mode% : In the configuration file, mean If the value of Mode is 2v2, it is the value of mean2v2Mode; if it is 4v4, it is the value of mean4v4Mode
+# %kill% : The number of enemies killed in your current game
+# %fkill% : Your KD value in this game
+# %kd% : Your KD value in this game
+# %death% : The number of deaths in your current game
+# %bed% : The number of digging beds in your current game
+# %game% : The game name of this game
+# %region% : The region of this bureau
+# %lastTaskTimeLeft% : Remaining time for the next task to be executed
+# %lastTask% : The task name of the next executed task
+# %itemO% The state of itemO
+# %stateOkLeft% The state of stateOkLeft
+# %stateOkRight% The state of stateOkRight
+
+ScoreBoard4v4Title: "&e&l%bw%"
+ScoreBoard4v4Line01: "&7%date% &8%mode%"
+ScoreBoard4v4Line02: "&a%lastTask% in &f%lastTaskTimeLeft%"
+ScoreBoard4v4Line03: "&f "
+ScoreBoard4v4Line04: "&c%redNameS% &f%redName% %redStat% &7%redIsMe%"
+ScoreBoard4v4Line05: "&9%blueNameS% &f%blueName% %blueStat% &7%blueIsMe%"
+ScoreBoard4v4Line06: "&a%greenNameS% &f%greenName% %greenStat% &7%greenIsMe%"
+ScoreBoard4v4Line07: "&e%yellowNameS% &f%yellowName% %yellowStat% &7%yellowIsMe%"
+ScoreBoard4v4Line08: "&f  "
+ScoreBoard4v4Line09: "&fKills: &a%kill%"
+ScoreBoard4v4Line10: "&fBreak Beds: &a%bed%"
+ScoreBoard4v4Line11: "&fFinal Kills: &a%fkill%"
+ScoreBoard4v4Line12: "&f      "
+ScoreBoard4v4Line13: "&e%ip%"
+ScoreBoard4v4Line14: ""
+ScoreBoard4v4Line15: ""
+ScoreBoard4v4Line16: ""
+# Variable supported team names Red, Blue, Green, Yellow,
+# Pink, White,  Gray, Aqua, Orange
+# Notice: The same content will be folded into the same line. For example,
+# if you want two empty lines, the first line needs to be a space,
+# and the second line needs to be two spaces
+# Support Variable:
+# %...Name% : Value of config.yml -> 'relTeamName_', the team color name must start with lowercase letters, such as redName, grayName
+# %...Stat% : The status of the team, The value of is required to be the same as above
+# %...IsMe% : Are you in the team or not ? The value of is required to be the same as above
+# %...NameS% : The first character of the team name. The value of is required to be the same as above
+# %...Player% : The number of people in the team, The value of is required to be the same as above
+# %...IsAlive% : Value of 'meanTeamStat_', The value of is required to be the same as above
+# %...BedStat% : Value of 'meanBedStat_', The value of is required to be the same as above
+# %formatTimeLeft% : The remaining time of the formatted game
+# %timeleft_s% : Game remaining time in seconds
+# %timeleft_m% : Game remaining time in minutes
+# %timeleft_h% : Game remaining time - hours
+# %timeleft_d% : Game remaining time in days
+# %timeline_mo% : Game remaining time in months
+# %timeleft_y% : Game remaining time in years
+# %date% : Today's date format is YYYY/M/D, such as 2080/3/32
+# %ip% : The value of meanServerIp in the configuration file
+# %bw% : The value of meanBedwars in the configuration file
+# %mode% : In the configuration file, mean If the value of Mode is 2v2, it is the value of mean2v2Mode; if it is 4v4, it is the value of mean4v4Mode
+# %kill% : The number of enemies killed in your current game
+# %fkill% : Your KD value in this game
+# %kd% : Your KD value in this game
+# %death% : The number of deaths in your current game
+# %bed% : The number of digging beds in your current game
+# %game% : The game name of this game
+# %region% : The region of this bureau
+# %lastTaskTimeLeft% : Remaining time for the next task to be executed
+# %lastTask% : The task name of the next executed task
+# %itemO% The state of itemO
+# %stateOkLeft% The state of stateOkLeft
+# %stateOkRight% The state of stateOkRight

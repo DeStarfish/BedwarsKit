@@ -1,0 +1,136 @@
+# ====================== #
+# BedwarsKit Shop Config #
+# ====================== #
+config-version: "1.9.9"
+
+# Do not modify: The configuration file will be automatically
+# renamed if it does not match the version currently used by the plugin
+
+levelupShop: true
+levelupShopOpenMode: "click on entity"
+levelupShopOpenModeEntityName: "&f&lUpgrade Shop"
+levelupItemType: "BOOK_AND_QUILL"
+levelupShopDelayOpen: true
+levelUpShopInvTitle: "Upgrade Shop"
+openShopOnCustomEntityName: false
+itemShopEntityName: "&f&lItem Shop"
+# levelupShop : Is the upgrade store feature enabled
+# levelupShopOpenMode : Upgrade the way the store opens,
+# supports the following modes:
+# "click on item" : Click on the item to open it
+# "click on entity" : Click on the villagers to open it
+# levelupShopOpenModeEntityName : Click on the name of the entity, which needs to be matched to open the menu
+# levelupItem Type : The item type of the item opened in the store
+# levelupShopDelayOpen : Is the delay open menu enabled? If an item is clicked, it will immediately open
+# open the Other Items section and add a slight delay to overwrite the Open Upgrade menu
+# teamEnchItemName_... : The name of the enchantment level in the menu
+# levelUpShopInvTitle : Menu title used to upgrade menus
+# openShopOnCustomEntityName : Is it allowed to use entities other than villagers as stores
+# itemShopEntityName : When openShopOnCustomEntityName is enabled, it must match the entity name to open the menu
+
+
+giveSharpEnchList:
+  - "WOOD_SWORD"
+  - "STONE_SWORD"
+  - "IRON_SWORD"
+  - "DIAMOND_SWORD"
+  - "GOLD_SWORD"
+  - "WOOD_AXE"
+  - "STONE_AXE"
+  - "IRON_AXE"
+  - "DIAMOND_AXE"
+  - "GOLD_AXE"
+giveProtEnchList:
+  - "LEATHER_LEGGINGS"
+  - "LEATHER_BOOTS"
+  - "CHAINMAIL_LEGGINGS"
+  - "CHAINMAIL_BOOTS"
+  - "IRON_LEGGINGS"
+  - "IRON_BOOTS"
+  - "DIAMOND_LEGGINGS"
+  - "DIAMOND_BOOTS"
+
+
+levelupsharpItemType: "IRON_SWORD"
+levelupsharpItemSlot: 19
+teamEnchItemName_Sharp1: "Sharpness I"
+teamEnchItemName_Sharp2: "Sharpness II"
+teamEnchItemName_Sharp3: "Sharpness III"
+teamEnchItemName_Sharp4: "Sharpness IV"
+teamEnchItemName_sharpMax: "Sharpness (Maxed)"
+
+levelupprotItemType: "IRON_CHESTPLATE"
+levelupprotItemSlot: 20
+teamEnchItemName_Prot1: "Protection I"
+teamEnchItemName_Prot2: "Protection II"
+teamEnchItemName_Prot3: "Protection III"
+teamEnchItemName_Prot4: "Protection IV"
+teamEnchItemName_protMax: "Protection (Maxed)"
+
+leveluphasteItemType: "GOLD_PICKAXE"
+leveluphasteItemSlot: 22
+teamEffItemName_haste1: "Haste I"
+teamEffItemName_haste2: "Haste II"
+teamEffItemName_haste3: "Haste III"
+teamEffItemName_hasteMax: "Haste (Maxed)"
+
+leveluphealItemType: "BEACON"
+leveluphealItemSlot: 23
+teamEffItemName_heal1: "Heal I"
+teamEffItemName_healMax: "Heal (Maxed)"
+teamEff_heal_dis: 15
+
+paneItemName: "&7Pane"
+paneItemLore:
+  - ""
+
+levelupresItemName: " "
+levelupresItemType: "FURNACE"
+levelupresItemSlot: 25
+# itemSlot: set to -1 to disable the item
+
+
+sharp1Cost2v2: 4
+sharp2Cost2v2: 8
+sharp3Cost2v2: 16
+sharp4Cost2v2: 32
+prot1Cost2v2: 2
+prot2Cost2v2: 4
+prot3Cost2v2: 8
+prot4Cost2v2: 16
+haste1Cost2v2: 2
+haste2Cost2v2: 4
+haste3Cost2v2: 6
+heal1Cost2v2: 1
+
+sharp1Cost4v4: 8
+sharp2Cost4v4: 16
+sharp3Cost4v4: 26
+sharp4Cost4v4: 36
+prot1Cost4v4: 5
+prot2Cost4v4: 10
+prot3Cost4v4: 20
+prot4Cost4v4: 30
+haste1Cost4v4: 4
+haste2Cost4v4: 6
+haste3Cost4v4: 8
+heal1Cost4v4: 3
+
+teamEnchantMaxCost: "Maxed"
+
+messLevelUpsharp1: "&6%player% &aPurchased team upgrade &6Sharpness I"
+messLevelUpsharp2: "&6%player% &aPurchased team upgrade &6Sharpness II"
+messLevelUpsharp3: "&6%player% &aPurchased team upgrade &6Sharpness III"
+messLevelUpsharp4: "&6%player% &aPurchased team upgrade &6Sharpness IV"
+
+messLevelUpprot1: "&6%player% &aPurchased team upgrade &6Protection I"
+messLevelUpprot2: "&6%player% &aPurchased team upgrade &6Protection II"
+messLevelUpprot3: "&6%player% &aPurchased team upgrade &6Protection III"
+messLevelUpprot4: "&6%player% &aPurchased team upgrade &6Protection IV"
+
+messLevelUphaste1: "&6%player% &aPurchased team upgrade &6Haste I"
+messLevelUphaste2: "&6%player% &aPurchased team upgrade &6Haste II"
+messLevelUphaste3: "&6%player% &aPurchased team upgrade &6Haste III"
+messLevelUpheal1: "&6%player% &aPurchased team upgrade &6Heal I"
+
+messLevelUpFailed: "&cInsufficient resources or having a higher level of enchantment!"

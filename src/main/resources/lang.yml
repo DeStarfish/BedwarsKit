@@ -1,0 +1,29 @@
+# ====================== #
+# BedwarsKit Lang Config #
+# ====================== #
+config-version: "1.9.8"
+# Do not modify: The configuration file will be automatically
+# renamed if it does not match the version currently used by the plugin
+
+command_help:
+  - "&a ================================"
+  - "&f "
+  - "&f BedwarsKit &bCommands:"
+  - "&f "
+  - "&f /bwk &eDisplay this help information."
+  - "&f /bwk reload &eReload configuration file."
+  - "&f /bwk edit &eToggle edit mode."
+  - "&f "
+  - "&a ================================"
+
+meanRegExListener: "Game editing mode enabled, registering additional listeners"
+meanRegExListenerSucc: "Registered additional event listeners"
+meanEditGameToggleToTrue: "The editing game mode has been activated. Hold the naming card and right-click on the entity to name it as an upgrade store (the value of levelupShopOpenModeEntityName in config.yml), hold the item display box and right-click on the entity to name it as an item store (the value of shopitemEntityName in config.yml), hold the redstone and right-click on the entity to delete its name, and hold the paper and right-click to leave edit mode."
+meanEditGameToggleToFalse: "Edit game mode to false"
+relConfigIsChange_tryToSave: "&eBedwarsRel's Config is changed, saving..."
+relConfigIsChange_Saved: "&aBedwarsRel's Config is saved."
+
+meanCommandIsPlayerOnly: "This command can only be executed by player!"
+
+meanEntityNameSetTo: "&aThe entity name has been set from&r '%orgName%' &ato&r -> '%newName%'"
+meanEntityNameRemove: "&aClear Entity Name, Org ->&r '%orgName%'"

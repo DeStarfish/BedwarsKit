@@ -1,0 +1,436 @@
+# ================= #
+# BedwarsKit Config #
+# ================= #
+config-version: "1.9.9"
+
+# Do not modify: The configuration file will be automatically
+# renamed if it does not match the version currently used by the plugin
+
+# ============= #
+# Basic Setting #
+# ============= #
+# Basic configuration for distinguishing game modes
+bungeeMode: "auto"
+# if bungee on, only one game mode can be specified
+# What mode do you want to determine?
+# Support "2v2", "4v4" and "auto"
+# auto : If the number of game teams is greater than 4, it is 2v2 mode,
+# otherwise it is 4v4 mode
+# ---------------------------------------------
+# The following settings are invalid when server in bungee mode
+# ---------------------------------------------
+
+lobbyWorld: "lobby"
+# lobbyWorld: Recognized as the game lobby
+
+worldMode_autoJudge: true
+# worldMode_autoJudge : If the number of game teams is greater than 4, it is 2v2 mode,
+# otherwise it is 4v4 mode
+# ---------------------------------------------
+# The following settings are invalid when worldMode_autoJudge is true
+gameWorld4v4:
+  - "exampleWorld"
+
+# ganeWorld4v4: In the world of the list, recognized as 4v4 mode
+# otherwise it is recognized as 2v2 mode
+# ---------------------------------------------
+
+# The most basic configuration of team names in the game
+JudgeTeamByColor: true
+# JudgeTeamByColor: Use DyeColor to judge the team
+# Only 9 commonly used colors are included.
+# If your team's color is not in the list, you need to
+# set JudgeTeamByColor to false and replace any relTeamName_ value
+# DyeColor that supports automatic judgment:
+# Team -> DyeColor
+# Red -> RED
+# Blue -> LIGHT_BLUE
+# Green -> LIME
+# Yellow -> YELLOW
+# Pink -> PINK
+# Aqua -> CYAN
+# White -> WHITE
+# Gray -> SILVER
+# Orange -> ORANGE
+# ---------------------------------------------
+# The following settings are invalid when JudgeTeamByColor is true
+relTeamName_Red: "Red"
+relTeamName_Blue: "Blue"
+relTeamName_Green: "Green"
+relTeamName_Yellow: "Yellow"
+relTeamName_Pink: "Pink"
+relTeamName_Aqua: "Aqua"
+relTeamName_White: "White"
+relTeamName_Gray: "Gray"
+relTeamName_Orange: "Orange"
+# It's the team display name, not the color name
+# ---------------------------------------------
+
+# ================= #
+# Basic Setting End #
+# ================= #
+
+# ============== #
+# BedwarsRel Fix #
+# ============== #
+
+relFix_creativeCantToggleFly: true
+relFix_cantPickupItems: true
+# creativeCantToggleFlyFix: Fix the issue of BedwarsRel's inability to switch flight in creation mode
+# cantPickupItemsFix: Fix the issue of BedwarsRel's player being unable to pick up items
+
+# ================== #
+# BedwarsRel Fix End #
+# ================== #
+
+deathGameMode: true
+deathGameMode_tpto: "team"
+deathGameMode_instantRepsawn: true
+respawnDelay: 5
+respawnTitle: "&a&lRespawn In &e&l%timeleft% &a&lSec"
+respawnSubTitle: " "
+respawnChat: ""
+respawnActionBar: ""
+respawnSuccTitle: "&f"
+respawnSuccSubTitle: " "
+respawnSuccChat: ""
+respawnSuccActionBar: ""
+# deathGameMode : Is the countdown to respawn enabled
+# deathGameMode_tpto : Where to teleport during respawn countdown
+# deathGameMode_instantRepsawn: Let players repsawn immediately after death
+# Supports the following modes:
+# none: Dont teleport
+# team: Team respawn point
+# lobby: Lobby join point
+# deathGameMode_instantRepsawn: instant respawn when death
+# respawnDelay : Countdown time for respawn in seconds
+# Variable: 
+# %timeleft% : Remaining respawn countdown time (seconds)
+
+preventloadworld: true
+preventloadworldMode: "before"
+preventloadworldMode_before_animfix: true
+# preventloadworld:
+#
+# Do you want to enable blocking the world from reloading later (i.e. no death gui)?
+#
+# If turned off, the player will reload the world every death , which may cause the client to lag.
+# Note: After activating this feature, dead players will immediately be set to
+# spectator mode, which may result in a lack of kill feedback. At present,
+# this function does not have any related compensation function.
+#
+# It is necessary to disable the die-on-void option in the BedwarsRel configuration file at the same time
+#
+# preventloadworldMode: Supports the following modes:
+#
+# after: Set health to greater than 0 immediately upon death to prevent the client from displaying it
+# Death interface, but when not synchronized, the client will display abnormal player status
+# The probability of the player dying but still able to continue walking is relatively high at 1.9+,
+# Since this is not a plugin issue, it cannot be fixed. You can use the 'before' mode instead
+#
+# before: Similar to a popular server that start with "h", cancel the damage that caused death this time
+# But it will result in the final damage without animation and sound. You can
+# Enable the 'preventloadworldModebefore-animfix' option for repair (this will also fix sound)
+
+noHunger: true
+maxFoodLevel: 20
+# noHunger: Whether to enable no hunger
+# maxFoodLevel: hunger level to be locked in
+
+noPearlDamage: false
+noPearlDamage_TPSound: true
+cleanBottle: true
+cleanHostileOnStart: true
+cleanBed: false
+noEndermanGriefing: true
+# noPearlDamage : Whether to activate the damage of the Endless Pearl
+# noPearlDamage_TPSound : Whether to activate the teleport sound of the Endless Pearl
+# cleanBottle : Is automatic cleaning of empty bottles enabled
+# cleanHostileOnStart : enable the deletion of all hostile creatures at the beginning of the game
+# cleanBed: Automatic cleaning of bed items
+# noEndermanGriefing : Prevent the enderman moving the blocks
+
+kill_res: true
+kill_res_chat: "&b&l + &f&l%count% &l%res%"
+# kill_res : Whether to enable killing and looting of resources
+# kill_res_chat : Prompt information after killing, supports changing
+# Variable :
+# %res% : Resource name, corresponding to mean Value of
+# %count% : The amount of resources obtained
+# %kName% : killer name
+# %dName% : death player name
+
+noOpenInventory: true
+noOpenInventoryTypeList:
+  - "BEACON"
+# noOpenInventory: Is it prohibited to open a certain type of item list
+# noOpenInventoryTypeList: List of items in the inventory list that are not allowed to be opened
+
+breakTitle: true
+breakTitleAll: "%breakTeamColor%%breakTeamName%&c bed has been destory"
+breakSubTitleAll: "&7Destroyer:%breakPlayerTeamColor%%breakPlayerName%"
+breakTitleBreakPlayer: "%breakTeamColor%%breakTeamName%"
+breakSubTitleBreakPlayer: "&aBed destory by you"
+breakTitleBreakTeam: "&cBed destroyed"
+breakSubTitleBreakTeam: "&7Destroyer:%breakPlayerTeamColor%%breakPlayerName%"
+# BreakTitle: Whether to enable the destruction bed title
+# All: Sent to all players
+# BreakPlayer: Sent to players who break the bed
+# BreakTeam: Sent to players whose beds have been destroyed
+# Variable:
+# %breakTeamColor%: The team color of the team whose bed was damaged
+# %breakTeamName%: The team name of the team whose bed was destroyed
+# %breakPlayerTeamColor%: The team color of the player who destroys the bed
+# %breakPlayerName%: The player name of the player who broke the bed
+# %breakPlayerTeamName%: The team name of the player who destroyed the bed
+
+dieOutGameItem_playAgain: true
+dieOutGameItem_playAgain_ItemName: "Play Again"
+dieOutGameItem_playAgain_ItemType: "PAPER"
+dieOutGameItem_playAgain_ItemSlot: 7
+dieOutGameItem_playAgain_clickSendCommand: "bwrj join %player%"
+# dieOutGameItem_playAgain_ClickSendCommand : command to send, %player% :who execute the command
+
+damagefb_mess_chat: ""
+damagefb_mess_title: ""
+damagefb_mess_subTitle: ""
+damagefb_mess_actionbar: ""
+damagefb_blood: true
+damagefb_bloodMode: "player"
+damagefb_bloodType: "REDSTONE_BLOCK"
+# damagefb_attackTitle: The title displayed when attacking a player
+# damagefb_attackSubTitle: Subtitle displayed when attacking a player
+# %damage% : damage
+# damagefb_attackBlood: Attack the player's particle effect
+# damagefb_attackBloodMode: The particle effect display mode for attacking players,
+# supports the following modes:
+# single: Generate player's location
+# player: The entire player
+# box: The player's surroundings
+
+killfb_sendmess_chat: ""
+killfb_sendmess_title: "%ohk% KILL"
+killfb_sendmess_subtitle: ""
+killfb_sendmess_actionbar: ""
+killfb_oneHealthKill: true
+killfb_oneHealthKill_itemType: "NETHER_STAR"
+killfb_oneHealthKill_itemName: "&4&lSoul"
+# supporting variables:
+# %kName%: The name of the killed player
+# %dName%: The name of the death player
+# %kHealth%: Fill in d or k to indicate the player's health value
+# %ohk%: represents the player's one life kill count
+# killfb_oneHealthKill: Is one life combo feedback enabled
+# killfb_oneHealthKill_items: Items given
+# It is necessary to change the configuration file of BedwarsRel at the same time to prevent cleaning the item
+# change keep-inventory-on-death to true
+
+meanSecond: "Second"
+
+tab: true
+tab_is_multiLine: true
+tab_head: "   &b&lBEDWARS   "
+tab_foot: "&d&lHave Fun!"
+tab_headList:
+  - "   &b&lBEDWARS   "
+  - " "
+  - "  &e&lEnter/hub to return to the lobby"
+  - " "
+tab_footList:
+  - " "
+  - "&d&lHave Fun!"
+
+upToChainArmor: "CHAINMAIL_CHESTPLATE"
+upToIronArmor: "IRON_CHESTPLATE"
+upToDiamondArmor: "DIAMOND_CHESTPLATE"
+# Automatically upgrade your equipment when an item is detected
+# UpToChainArmor: Upgrade to Chain Equipment
+# UpToIronArmor: Upgrade to Iron equipment
+# UpToDiamondArmor: Upgrade to Diamond equipment
+chainPriceType: "IRON_INGOT"
+ironPriceType: "GOLD_INGOT"
+diamondPriceType: "EMERALD"
+chainPrice: 20
+ironPrice: 4
+diamondPrice: 3
+# When it is detected that you have purchased too much equipment, the type of item and its price will be returned
+# PriceType: Item type
+# Price: Item price
+
+messreloadnow: "&bBedwarsKit &7>> &eReloading configuration file"
+messreloadsucc: "&bBedwarsKit &7>> &aSuccessfully reloaded configuration file"
+
+startmess_all_chat: "
+&a======================================= \n
+\n            &e&lBEDWARS\n \n
+&e&lDestroy the enemy's bed and defeat all enemy players! \n
+&e&lCollecting diamonds can purchase bonuses in the upgrade store! \n \n
+&a======================================="
+startmess_all_title: " "
+startmess_all_subtitle: " "
+startmess_all_actionbar: " "
+
+placeCorrect_ResSpawner: true
+placeCorrect_ResSpawner_mess_chat: ""
+placeCorrect_ResSpawner_mess_title: ""
+placeCorrect_ResSpawner_mess_subtitle: ""
+placeCorrect_ResSpawner_mess_actionbar: "&cYou cannot place blocks here!"
+placeCorrect_ResSpawner_dis: 6
+
+placeCorrect_PlayerSpawnLoc: true
+placeCorrect_PlayerSpawnLoc_mess_chat: ""
+placeCorrect_PlayerSpawnLoc_mess_title: ""
+placeCorrect_PlayerSpawnLoc_mess_subtitle: ""
+placeCorrect_PlayerSpawnLoc_mess_actionbar: "&cYou cannot place blocks here!"
+placeCorrect_PlayerSpawnLoc_dis: 6
+
+placeCorrect_notInGame: true
+placeCorrect_notInGame_OpBypass: true
+breakCorrect_notInGame: true
+breakCorrect_notInGame_OpBypass: true
+
+antiDrop: true
+antiDropList:
+  - "HELMET"
+  - "CHESTP"
+  - "LEG"
+  - "BOOT"
+# antiDrop : Whether to enable anti movement equipment
+
+lobbyLeaveTeam: true
+lobbyJoinTeam_changeItemColor: true
+lobbyJoinTeam_mess_chat: ""
+lobbyJoinTeam_mess_title: ""
+lobbyJoinTeam_mess_subtitle: ""
+lobbyJoinTeam_mess_actionbar: "&aYou Joined %teamColor%%teamName%, &eHold team clothes and right-click to leave"
+
+resourceSplit: true
+resourceSplitDis: 2.9
+
+noInteractWhileEndGame: true
+noWoodSwordDropWhenNothaveSword: true
+noWoodAxeDropWhenNothaveAxe: true
+noWoodPickaxeDropWhenNothavePickaxe: true
+teleportAlwayKeepDirection: true
+
+startKitCompass: true
+compassDisplayName: "&f&lTracker"
+holdCompassDisplayName: "&7 "
+holdCompass_mess_enable: true
+holdCompass_mess_actionbar: "&a%stateOkRight% &a&lTracking - &f&l%nerPlayer% &a&l- &f&l%nerDistane% &a&lblocks &a%stateOkLeft%"
+holdCompassNotFound_mess_actionbar: "&c&l%stateOkRight% &c&lNo Target Found &c&l%stateOkLeft%"
+leaveHoldCompass_mess_actionbar: " "
+# startKitCompass: Whether to enable automatic compass for players
+# compassDisplayName : the compass Item name, if dont want a name, set it to 'null'
+# holdCompassDisplayName : the compass Item name when hold it, if dont want a name, set it to 'null'
+# When hold Compass send target messgae to player
+# %nerPlayer% : recently player name
+# %nerPlayerTeamColor% : recently player's team color
+# %nerPlayerTeamName% : recently player's team name
+# %nerDistane% : recently player distane
+# %stateOkLeft% : the state of progess left
+# %stateOkRight% : the state of progess right
+# %itemO% : the state of progess itemO
+# %bwrel_prefix% : bedwarsrel's message prefix
+# %bwrel_mess% : bedwarsrel 's locate config: ingame.specials.tracker.target-found
+# or ingame.specials.tracker.no-target-found
+# leaveHoldCompass_mess_actionbar : message that stop holding compass, if dont want send, set it to ""
+
+noItemBreak: true
+nobreakList:
+  - "WOOD_SWORD"
+  - "WOOD_PICKAXE"
+  - "WOOD_AXE"
+  - "STONE_SWORD"
+  - "IRON_SWORD"
+  - "DIAMOND_SWORD"
+  - "GOLD_SWORD"
+  - "GOLD_PICKAXE"
+  - "GOLD_AXE"
+  - "LEATHER_HELMET"
+  - "LEATHER_CHESTPLATE"
+  - "LEATHER_LEGGINGS"
+  - "LEATHER_BOOTS"
+  - "CHAINMAIL_HELMET"
+  - "CHAINMAIL_CHESTPLATE"
+  - "CHAINMAIL_LEGGINGS"
+  - "CHAINMAIL_BOOTS"
+  - "IRON_HELMET"
+  - "IRON_CHESTPLATE"
+  - "IRON_LEGGINGS"
+  - "IRON_BOOTS"
+  - "DIAMOND_HELMET"
+  - "DIAMOND_CHESTPLATE"
+  - "DIAMOND_LEGGINGS"
+  - "DIAMOND_BOOTS"
+# noItemBreak : Is it enabled to prevent item damage
+
+meanIron: "&fIron"
+meanGold: "&6Gold"
+meanDiamond: "&bDiamond"
+meanEmerlad: "&aEmerlad"
+
+armorColor_RED_red: 255
+armorColor_RED_green: 0
+armorColor_RED_blue: 0
+armorColor_BLUE_red: 0
+armorColor_BLUE_green: 0
+armorColor_BLUE_blue: 255
+armorColor_GREEN_red: 0
+armorColor_GREEN_green: 255
+armorColor_GREEN_blue: 0
+armorColor_YELLOW_red: 255
+armorColor_YELLOW_green: 255
+armorColor_YELLOW_blue: 0
+armorColor_AQUA_red: 0
+armorColor_AQUA_green: 255
+armorColor_AQUA_blue: 255
+armorColor_GRAY_red: 190
+armorColor_GRAY_green: 190
+armorColor_GRAY_blue: 190
+armorColor_PINK_red: 255
+armorColor_PINK_green: 105
+armorColor_PINK_blue: 180
+armorColor_WHITE_red: 255
+armorColor_WHITE_green: 255
+armorColor_WHITE_blue: 255
+armorColor_ORANGE_red: 255
+armorColor_ORANGE_green: 165
+armorColor_ORANGE_blue: 0
+# Leather armor color (RGB value)
+
+joinServer_mess: "null"
+leaveServer_mess: "null"
+rejoin: true
+rejoin_mess: "%bwrel_prefix% &e%player% Rejoin."
+# This feature is invalid for players who enter commands to exit the game
+# If dont want any, set it to "null"
+
+gameOver_mess_chat:
+  "&a================================
+  \n
+\n                 &7&lGameOver! \n 
+\n
+         &f&lWinner: &b&l%winner% \n 
+\n 
+         &eTop Kills: \n 
+\n
+         &6&l1st: %topKills1% \n
+         &d&l2nd: %topKills2% \n
+         &a&l3rd: %topKills3% \n
+\n
+&a================================
+"
+gameOver_mess_topKills_format: "&b&l%player% &7- &f&l%kills%"
+# Supports:
+# %winner% : All winner player
+# %top...1% - %top...5%
+# %topKills%: total kills
+
+dieOut_mess_chat: "%bwrel_prefix% &cYou have been eliminated!"
+dieOut_mess_title: "&c&lGame Over!"
+dieOut_mess_subtitle: " "
+dieOut_mess_actionbar: " "
+
+update_checker: true
+update_reportOp: true
